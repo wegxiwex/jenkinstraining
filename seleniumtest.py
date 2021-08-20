@@ -1,4 +1,5 @@
 from selenium import webdriver
+import time
 
 def test_setup():
 	global driver
@@ -19,6 +20,7 @@ def test_form_entry():
 	driver.find_element_by_name("gaji").send_keys("100 JT, Aamiin")
 	driver.find_element_by_name("atasan").send_keys("Sih Eko")
 	driver.find_element_by_name("submit").click()
+	time.sleep(15)
 
 def test_cleanup():
 	driver.close()
